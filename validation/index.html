@@ -1,1 +1,191 @@
-
+<html>
+	<head>
+		<title>signup</title>
+		<script>
+			function validateMyForm()
+			{
+			//-----------------------------//
+				//step 1: fetching values of form controls and storing them into respective variables
+				var name=document.getElementById("fname").value.trim();
+				var email=document.getElementById("email").value.trim();
+				var mobile=document.getElementById("mob").value.trim();
+				var city=document.getElementById("city").value;
+				var state=document.getElementById("state").value;
+				var address=document.getElementById("address").value.trim();
+				var male=document.getElementById("male").checked;
+				var female=document.getElementById("female").checked;
+				var hob1=document.getElementById("hobby1").checked;
+				var hob2=document.getElementById("hobby2").checked;
+				var hob3=document.getElementById("hobby3").checked;
+				
+				//step 2: take a boolean variable to find out the form is completely filled
+				
+				var sts=true;
+				
+				//step 3: check if respective variable are blank ,if blank make the respective form conntrol border
+				//to red and also give a message
+				
+				//for name
+				if(name=="")
+				{
+					document.getElementById("fname").style.border="2px solid red";
+					sts=false;
+				}
+				else
+				{
+					document.getElementById("fname").style.border="";
+				}
+				//for email
+				if(email=="")
+				{
+					document.getElementById("email").style.border="2px solid red";
+					sts=false;
+				}
+				else
+				{
+					document.getElementById("email").style.border="";
+				}
+			
+				//for mobile
+				if(mobile=="")
+				{
+					document.getElementById("mob").style.border="2px solid red";
+					sts=false;
+				}
+				else
+				{
+					document.getElementById("mob").style.border="";
+				}
+				//for city
+				if(city=="")
+				{
+					document.getElementById("city").style.border="2px solid red";
+					sts=false;
+				}
+				else
+				{
+					document.getElementById("city").style.border="";
+				}
+				
+				//for state
+				if(state=="")
+				{
+					document.getElementById("state").style.border="2px solid red";
+					sts=false;
+				}
+				else
+				{
+					document.getElementById("state").style.border="";
+				}
+				
+				//for address
+				if(address=="")
+				{
+					document.getElementById("address").style.border="2px solid red";
+					sts=false;
+				}
+				else
+				{
+					document.getElementById("address").style.border="";
+				}
+				
+				if(male==true||female==true)
+				{
+					document.getElementById("gendererror").innerHTML="";
+				}
+				else
+				{
+					document.getElementById("gendererror").innerHTML="please select the gender";
+					document.getElementById("gendererror").style.color="red";
+				}
+				
+				//for hobby
+				if(hob1==true||hob2==true||hob3==true)
+				{
+					document.getElementById("hobbyerror").innerHTML="";
+				}
+				else
+				{
+					document.getElementById("hobbyerror").innerHTML="please select the hobby";
+					document.getElementById("hobbyerror").style.color="red";
+				}
+				//if sts==true means if all form fields is filled with data then only submit my form whose id is f1
+				return sts;
+			//-----------------------------//
+			}
+		</script>
+	</head>
+	<body>
+	<form action="#" method="POST" id="f1" onsubmit="return validateMyForm()">
+		<table border="1" align="center">
+			<tr>
+				<th>Name</th>
+				<td><input type="text" id="fname" placeholder="Enter Name"></td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td><input type="text" id="email" placeholder="Enter Email"></td>
+			</tr>
+			<tr>
+				<th>Mobile</th>
+				<td><input type="text" id="mob" placeholder="Enter Mobile"></td>
+			</tr>
+			<tr>
+				<th>City</th>
+				<td>
+					<select id="city">
+						<option value="">Choose City</option>
+						<option value="Pune">Pune</option>
+						<option value="Bangalore">Bangalore</option>
+						<option value="Mumbai">Mumbai</option>
+						<option value="Chennai">Chennai</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>State</th>
+				<td>
+					<select id="state">
+						<option value="">Choose State</option>
+						<option value="Maharashtra">Maharashtra</option>
+						<option value="Karnataka">Karnataka</option>
+						<option value="TN">Tamil Nadu</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>Address</th>
+				<td>
+					<textarea size="20" id="address" ></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th>Gender</th>
+				<td>
+					<input type="radio" name="gender" value="M" id="male">Male
+					<input type="radio" name="gender" value="F" id="female">Female
+					
+					<i id="gendererror"></i>
+				</td>
+			</tr>
+			<tr>
+				<th>Hobby</th>
+				<td>
+					<input type="checkbox" name="hobby" value="reading" id="hobby1">Reading
+					<input type="checkbox" name="hobby" value="singing" id="hobby2">Singing
+					<input type="checkbox" name="hobby" value="dancing" id="hobby3">Dancing
+					
+					<i id="hobbyerror"></i>
+				</td>
+			</tr>
+			<tr>
+				
+				<td colspan="2" align="center">
+						<button type="button" onclick="validateMyForm()">Signup</button>
+						<button type="reset">clear</button>
+				</td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>
