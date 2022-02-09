@@ -1,37 +1,60 @@
-<!DOCTYPE HTML>
-<HEAD>
-<title>Media query</title>
-</head>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body
-{
-background-color:pink;
-}
-@media screen and (min-width: 600px) {
-  body 
-  {
-    background-color: lightgreen;
-  }
-  h1{
-    font-size:20px;
-	color:red;
-	}
-p
-{
-text-align:center;
-color:blue;
-font-size:50px;
+
+.wrapper {overflow: auto;}
+
+#main {margin-left: 4px;}
+
+#leftsidebar {
+  float: none;
+  width: auto;
 }
 
-	
-  </style>
-  <body>
-  
+#menulist {
+  margin: 0;
+  padding: 0;
+}
+
+.menuitem {
+  background: #CDF0F6;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  list-style-type: none;
+  margin: 4px;
+  padding: 2px;
+}
+li.menuitem:hover {
+
+background-color:red;
+  border: 3px solid ##ccc;
+}
+
+@media screen and (min-width: 480px) {
+  #leftsidebar {width: 200px; float: left;}
+  #main {margin-left: 216px;}
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<div id="leftsidebar">
+<ul id="menulist">
+<li class="menuitem">Menu-item 1</li>
+<li class="menuitem">Menu-item 2</li>
+<li class="menuitem">Menu-item 3</li>
+<li class="menuitem">Menu-item 4</li>
+<li class="menuitem">Menu-item 5</li>
+</ul>
+</div>
+
+<div id="main">
 <h1>Resize the browser window to see the effect!</h1>
-<p><strong>The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</strong></p>
-<img src="fl1.jpg" alt="flower" width="300" height="300">
-<img src="fl2.jpg" alt="flower" width="300" height="300">
-
+<p>This example shows a menu that will float to the left of the page if the viewport is 480 pixels wide or wider. If the viewport is less than 480 pixels, the menu will be on top of the content.</p>
+</div>
+</div>
 
 </body>
 </html>
