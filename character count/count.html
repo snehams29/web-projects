@@ -1,1 +1,31 @@
+<html>
+	<head>
+	<title>
+	character count
+	</title>
+	<script>
+	function countchar()
+	{
+		var a=document.getElementById("t1").value;
+		var leftchar=100-a.length;
+		document.getElementById("pending").innerHTML=leftchar;
+		var total=a.length;
+		document.getElementById("totalchar").innerHTML=total+"character you typed"
+		document.getElementById("typedchars").innerHTML=a;
+	}//function closses
+	</script>	
+	</head>
+	<body>
+	<center>
+		<textarea cols="25" rows="15" maxlength="100" 
+		onkeyup="countchar()" id="t1" placeholder="enter the message upto 100 character"></textarea>
+		
+		<p><i id="pending"></i>out of 100 character</p>
+		<p id="totalchar"></p>
+		<p id="typedchars"></p>
+	</center>
 
+	</body>
+
+
+</html>
