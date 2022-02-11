@@ -1,1 +1,25 @@
-
+<html>
+	<head>
+	<title>Add control</title>
+	<script>
+	var counter=0;
+	function addnew()
+	{
+		var old=document.getElementById("div1").innerHTML;
+		counter++;
+		var newdata="counter:"+counter+"<input type='text'>"+"<br>";
+		document.getElementById("div1").innerHTML= old+newdata;
+	}//fn closses
+	
+	
+	</script>
+	</head>
+	<body>
+	<center>
+		<button type="button" onclick="addnew()">add new</button>
+		<div id="div1">
+		no data
+		</div>
+		</center>
+		</body>
+</html>
