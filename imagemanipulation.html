@@ -1,1 +1,64 @@
-
+<html>
+	<head>
+	<title>image manipulation</title>
+	<style>
+	.myphoto{
+				height:300px;
+				width:500px;
+				background-color:blue;
+				margin:auto;
+				
+	
+			}
+			button{
+			height:50px;
+			width:30px;
+			background-color:blue;
+			border:2px solid blue;
+			border-radius:5px;
+			color:white;
+			
+			
+			}
+			#div2 #div3{
+					margin:auto;
+					height:150px;
+					width:500px;
+					text-align:center;
+			
+			}
+			</style>
+			<script>
+				function changePhoto(photoname)
+				{
+					document.getElementById("ph1").src=photoname;
+				}
+			
+			</script>
+	</head>
+	<body>
+	<h3 align="center">image manipulation</h3>
+	<div id="myphoto">
+	<img src="11.jpg" height="300px" width="500px" id="ph1">
+	</div>
+	
+	<div id="div2">
+	<button onclick="changePhoto('11.jpg')">01</button>
+	<button onclick="changePhoto('12.jpg')">02</button>
+	<button onclick="changePhoto('13.jpg')">03</button>
+	<button onclick="changePhoto('14.jpg')">04</button>
+	<button onclick="changePhoto('15.jpg')">05</button>
+	<button onclick="changePhoto('16.jpg')">06</button>
+	</div>
+	
+	<div id="div3">
+	<img src="11.jpg" height="50px" width="50px" onmousemove="changePhoto('11.jpg')">
+	<img src="11.jpg" height="50px" width="50px" onmousemove="changePhoto('12.jpg')">
+	<img src="11.jpg" height="50px" width="50px" onmousemove="changePhoto('13.jpg')">
+	<img src="11.jpg" height="50px" width="50px" onmousemove="changePhoto('14.jpg')">
+	<img src="11.jpg" height="50px" width="50px" onmousemove="changePhoto('15.jpg')">
+	<img src="11.jpg" height="50px" width="50px" onmousemove="changePhoto('16.jpg')">
+	</div>
+	
+	</body>
+	</html>
