@@ -1,0 +1,25 @@
+<html>
+<body>
+<script type='text/javascript'>
+function letterAndNumberValidation()
+{
+var letterAndNumberValue = /^[0-9a-zA-Z]+$/;
+if(document.getElementById('txtletter').value.match(letterAndNumberValue))
+{
+alert("Yes you enter letters or numbers only.");
+return true;
+}
+else
+{
+alert('Only letters and numbers allowed');
+txtletter.focus();
+return false;
+}
+}
+</script>
+<form>
+Enter Value: <input type='text' id='txtletter'/>
+<input type='button' id="btnSubmit" onclick="letterAndNumberValidation()" value='Submit' />
+</form>
+</body>
+</html>

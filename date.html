@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>getDate() method is used for display today's date in JavaScript</p>
+<p id="currentDateDate"></p>
+<p id="currentMonth"></p>
+<p id="currentYear"></p>
+<p id="currentFullDate"></p>
+<p id="currentTime"></p>
+<script>
+var date = new Date();
+document.getElementById("currentDateDate").innerHTML ="Current Date using JavaScript: "+date.getDate();
+document.getElementById("currentMonth").innerHTML ="Current Month using JavaScript: "+(date.getMonth()+1);
+document.getElementById("currentYear").innerHTML ="Current Year using JavaScript: "+date.getFullYear();
+document.getElementById("currentFullDate").innerHTML ="Current Full Date using JavaScript: "+date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
+document.getElementById("currentTime").innerHTML ="Current Time using JavaScript: "+date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+</script>
+</body>
+</html>
