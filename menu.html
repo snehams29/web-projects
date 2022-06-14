@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            body{ 
+                margin:0px;
+            }
+             
+            #mainmenu{
+                background:black;
+                margin:0px;
+            }
+             
+            #mainmenu li{
+                display:inline-block;
+                padding:16px 30px; 16px;
+                color:white;
+                font-weight:bold;
+                transition:background 1s;
+            }
+             
+            #mainmenu li:hover{
+                background:blue;
+                cursor:pointer;
+                color:orange;
+            }
+             
+             
+            #mainmenu li .submenu li{
+                display:block !important;
+                padding:10px 30px 10px; /* add this line */
+            }
+             
+            .submenu{
+                display:none;
+                background:black;
+                margin:15px -30px;  /* add this line */
+                padding: 0px;
+            }
+             
+            #mainmenu li:hover .submenu{
+                display:block;
+                position:absolute;
+            }
+             
+             
+        </style>
+    </head>
+    <body>
+        <ul id="mainmenu">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+             
+            <li>Our Services
+                <ul class="submenu">
+                    <li> Marketing </li>
+                    <li> Education </li>
+                    <li> Employment </li>
+                </ul>
+            </li>
+             
+            <li>Technologies
+                <ul class="submenu">
+                    <li> Web Technologies </li>
+                    <li> Mobile App </li>
+                    <li> Software Development  </li>
+                    <li> Software Testing  </li>
+                </ul>
+            </li>
+             
+            <li>Branches
+                <ul class="submenu">
+                    <li> Bangalore </li>
+                    <li> Mumbai </li>
+                    <li> Chennai </li>
+                    <li> Delhi </li>
+                    <li> Pune </li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
