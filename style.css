@@ -1,0 +1,24 @@
+body{
+padding: 50px;
+
+.box{
+background-color:blue;
+width: 200px;
+height: 200px;
+position: relative;
+display: inline-block;
+
+animation-name: myframes;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+
+@keyframes myframes{
+from{
+height: 200px;
+
+to{
+
+height: 500px;
+}
+}
