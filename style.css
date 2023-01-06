@@ -1,7 +1,7 @@
 body{
 padding: 50px;
 
-box{
+.box{
 background-color:blue;
 width: 200px;
 height: 200px;
