@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+  /* Create the animation... */
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  /* ...and then apply it: */
+  .box {
+    animation: slide-in 1000ms;
+  }
+</style>
+
+<div class="box">
+  Hello World
+</div>
+</html>

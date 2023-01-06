@@ -1,0 +1,13 @@
+body {
+  padding: 32px 0;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background: slateblue;
+  padding: 8px;
+  display: grid;
+  place-content: center;
+  color: white;
+  text-align: center;
+}
